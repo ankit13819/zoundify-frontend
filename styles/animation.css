@@ -1,0 +1,29 @@
+/* styles/animation.css */
+@keyframes colorChange {
+    0% {
+        background-color: #ff0000;
+        /* Start color */
+    }
+
+    50% {
+        background-color: #00ff00;
+        /* Middle color */
+    }
+
+    100% {
+        background-color: #0000ff;
+        /* End color */
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
