@@ -1,3 +1,5 @@
+import Image from "next/image";
+import mediaImage from "../../src/assets/media.png";
 export default function Project() {
   return (
     <div className="project-table">
@@ -22,7 +24,9 @@ export default function Project() {
         </thead>
         <tbody>
           <tr>
-            <td>Peter</td>
+            <td>
+              <Image src={mediaImage} alt="media image" />
+            </td>
             <td>
               Title
               <br />
@@ -34,7 +38,9 @@ export default function Project() {
             <td>STATUS</td>
           </tr>
           <tr>
-            <td>Lois</td>
+            <td>
+              <Image src={mediaImage} alt="media image" />
+            </td>
             <td>
               Title
               <br />
@@ -46,7 +52,9 @@ export default function Project() {
             <td>STATUS</td>
           </tr>
           <tr>
-            <td>Joe</td>
+            <td>
+              <Image src={mediaImage} alt="media image" />
+            </td>
             <td>
               Title
               <br />
@@ -58,7 +66,9 @@ export default function Project() {
             <td>STATUS</td>
           </tr>
           <tr>
-            <td>Cleveland</td>
+            <td>
+              <Image src={mediaImage} alt="media image" />
+            </td>
             <td>
               Title
               <br />
