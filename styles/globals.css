@@ -299,6 +299,47 @@ button {
   font-weight: 700;
 }
 
+.project-table table {
+  width: 100%;
+  height: 100%;
+}
+
+.project-buttons {
+  color: #ffffff;
+}
+
+.buttonOne {
+  padding-right: 30px;
+  text-decoration: underline;
+}
+
+.buttonTwo {
+  padding-right: 30px;
+}
+
+.buttonThree {
+  padding-right: 30px;
+}
+
+.project-table {
+  border-collapse: collapse;
+
+  background-color: #2e2e30;
+  border: 2px;
+  padding: 10px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.project-table th,
+td {
+  padding: 40px;
+  text-align: left;
+  border-bottom: 1px solid #505050;
+}
+
 @media only screen and (max-width: 768px) {
   .custom-google-login {
     width: 100%; /* Adjust width for smaller screens */
@@ -312,13 +353,25 @@ button {
 /* Mobile Responsive */
 @media only screen and (max-width: 768px) {
   .login-page-new__main-form {
-    width: 345px;
+    width: auto;
     margin: 20px 20px 50px;
     padding: 20px;
   }
   .login-page-new__top-right-text {
-    font-size: 10px;
+    font-size: 8px;
     margin-bottom: 35px;
+    font-weight: 700;
+  }
+  .login-page-new__main-form-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0;
+  }
+  .cu-show-pwd {
+    font-size: 10px;
+    margin-top: 2px;
   }
   .logo {
     font-size: 10px;

@@ -11,19 +11,21 @@ export default function Header() {
           alt="zoundify image"
           width={40}
           height={40}
-          style={{ paddingTop: "30px", paddingLeft: "10px" }}
+          style={{ paddingTop: "30px", paddingLeft: "10px", cursor: "pointer" }}
+          onClick={() => router.push("/")}
         />
-        <span
+        <button
           style={{
             position: "relative",
-            marginLeft: "10px",
+            fontSize: "30px",
             marginTop: "30px",
             fontWeight: "900",
           }}
           className="logo"
+          onClick={() => router.push("/")}
         >
           Zoundify
-        </span>
+        </button>
         <div className="login-page-new__top-right ng-star-inserted">
           <div className="login-page-new__top-right-text">
             {" "}
