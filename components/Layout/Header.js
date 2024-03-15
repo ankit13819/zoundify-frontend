@@ -5,14 +5,27 @@ export default function Header() {
   const router = useRouter();
   return (
     <div className="header">
-      <nav>
+      <nav style={{ display: "flex", alignItems: "center" }}>
         <Image
-          src={zoundifyImage}
+          src="logo.svg"
           alt="zoundify image"
-          className="login-page-new__logo-img"
+          width={40}
+          height={40}
+          style={{ paddingTop: "30px", paddingLeft: "10px" }}
         />
-        <div class="login-page-new__top-right ng-star-inserted">
-          <div class="login-page-new__top-right-text">
+        <span
+          style={{
+            position: "relative",
+            marginLeft: "10px",
+            marginTop: "30px",
+            fontWeight: "900",
+          }}
+          className="logo"
+        >
+          Zoundify
+        </span>
+        <div className="login-page-new__top-right ng-star-inserted">
+          <div className="login-page-new__top-right-text">
             {" "}
             Already playing with Zoundify?{" "}
           </div>
