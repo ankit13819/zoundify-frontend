@@ -70,7 +70,8 @@ export default function SignUp() {
     <Layout>
       <div className="login-page-new__main-form">
         <div className="login-page-new__main-form-title-brand">
-          <h1 className="login-page-new__main-form-title">Let's go!</h1>
+          <h1 className="login-page-new__main-form-title">Let&apos;s go!</h1>
+
           <div className="login-page-new__main-form-router-outlet login-page-new__main-form-login">
             <form onSubmit={handleSubmit} autoComplete="off">
               <div className="login-page-new__main-form-row">
