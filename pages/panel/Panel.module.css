@@ -213,7 +213,7 @@
 
 .TypographyPresentation--s,
 .TypographyPresentation {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 
@@ -320,13 +320,12 @@
   fill: #1e1f21;
 } */
 
-/* .UpsellButton,
 .ThemeableRectangularButtonPresentation--isEnabled:hover {
   background: #e2b266;
   border-color: #e2b266;
   color: #1e1f21;
   fill: #1e1f21;
-} */
+}
 .UpsellButton,
 .ThemeableRectangularButtonPresentation {
   background: #e2b266;
@@ -540,7 +539,7 @@
 }
 
 .Sidebar {
-  background-color: var(--color-navigation-background-medium);
+  background-color: #2e2e30;
   display: flex;
   flex-direction: column;
 }
@@ -585,24 +584,15 @@
 .ThemeableInteractiveCardPresentation--isSelected,
 .ThemeableInteractiveCardPresentation--isEnabled,
 .ThemeableCardPresentation {
-  background: var(--color-navigation-background-active);
+  background: rgba(255, 255, 255, 0.11);
 }
-.ThemeableInteractiveCardPresentation--isEnabled,
-.ThemeableInteractiveCardPresentation--isSelected,
-.ThemeableCardPresentation,
-.ThemeableCardPresentation--isValid {
-  border-color: var(--color-selected-border);
-}
+
 .SidebarNavigationLinkCard,
 .ThemeableInteractiveCardPresentation--isSelected,
 .ThemeableInteractiveCardPresentation--isEnabled {
   outline: none;
 }
-.ThemeableInteractiveCardPresentation--isEnabled,
-.ThemeableInteractiveCardPresentation--isSelected,
-.ThemeableCardPresentation {
-  background: var(--color-selected-background);
-}
+
 .ThemeableInteractiveCardPresentation,
 .ThemeableInteractiveCardPresentation--isEnabled {
   cursor: pointer;
@@ -626,9 +616,9 @@
 .ThemeableInteractiveCardPresentation {
   outline: none;
 }
-.ThemeableCardPresentation {
-  background: var(--color-card-background);
-  border: 1px solid var(--color-border);
+.ThemeableCardPresentationNav {
+  background: #2a2b2d;
+  border: 1px solid #505050;
   border-radius: 8px;
   box-shadow: none;
   box-sizing: border-box;
@@ -636,16 +626,10 @@
   transition-property: background, border-color, box-shadow;
 }
 .link {
-  color: var(--color-text);
+  color: #1e1f21;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: npne;
   background-color: rgba(0, 0, 0, 0);
-}
-
-.link:-webkit-any-link {
-  color: -webkit-link;
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 .SidebarNavigationLinkCard-icon {
@@ -679,4 +663,201 @@
 .SidebarNavigationLinkCard-spacer {
   flex-grow: 1;
   flex-shrink: 1;
+}
+
+/*Project Starte in sidebar */
+.Sidebar-customScrollbarScrollable {
+  border-top: 1px solid #424244;
+}
+.CustomScrollbarScrollable {
+  flex: 1 1 auto;
+  min-height: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.Scrollable--vertical {
+  min-height: 1px;
+  overflow-y: auto;
+}
+
+.Scrollable--withCompositingLayer {
+  will-change: transform;
+}
+.CustomScrollbarScrollable-scrollable {
+  bottom: 0;
+  left: 0;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  width: 125%;
+}
+
+.ResizeListener,
+.ResizeListener-expand,
+.ResizeListener-shrink {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+.ResizeListener-expandChild {
+  height: 99999px;
+  width: 99999px;
+}
+.ResizeListener-expandChild,
+.ResizeListener-shrinkChild {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.Sidebar-customScrollbarScrollable,
+.CustomScrollbarScrollable-content {
+  padding-top: 12px;
+}
+
+.Sidebar,
+.CustomScrollbarScrollable-content {
+  display: flex;
+  flex-direction: column;
+}
+.Sidebar,
+.CustomScrollbarScrollable-content {
+  padding-bottom: 12px;
+}
+.Sidebar,
+.CustomScrollbarScrollable-content {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 1px 0;
+  position: relative;
+}
+.CustomScrollbarScrollable-content {
+  width: 80%;
+}
+
+.Sidebar-sectionsSortableList {
+  flex: 1;
+}
+
+.SidebarCollapsibleSection,
+.SidebarCollapsibleSection:last-of-type,
+.SidebarCollapsibleSection--isExpanded {
+  border-bottom: 0;
+}
+
+.SidebarCollapsibleSection {
+  border-bottom: 0;
+  padding: 4px 0;
+}
+
+.SidebarUpdatedCollapsibleHeader {
+  align-items: center;
+  cursor: grab;
+  display: flex;
+  height: 28px;
+  margin-bottom: 4px;
+  padding-right: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.SidebarUpdatedCollapsibleHeader-toggleButton {
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  margin-right: 4px;
+  width: 20px;
+}
+
+.SidebarUpdatedCollapsibleHeader-toggleIcon {
+  fill: #a2a0a2;
+  height: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  opacity: 0;
+  transform: rotate(90deg);
+  transition: transform 200ms;
+}
+
+.Icon {
+  flex: 0 0 auto;
+  height: 16px;
+  width: 16px;
+}
+
+.TypographyPresentation--h6,
+.TypographyPresentation {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.TypographyPresentation--overflowTruncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.TypographyPresentation--fontWeightMedium {
+  font-weight: 500;
+}
+.TypographyPresentation--colorNavigation {
+  color: #f5f4f3;
+}
+.TypographyPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ThemeableIconButtonPresentation--small,
+.ThemeableIconButtonPresentation {
+  height: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.SidebarUpdatedCollapsibleHeader-addButton,
+.ThemeableIconButtonPresentationSidebar {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  fill: #a2a0a2;
+}
+.SidebarUpdatedCollapsibleHeader-addButton,
+.ThemeableIconButtonPresentation {
+  border-radius: 6px;
+}
+.ThemeableIconButtonPresentation,
+.ThemeableIconButtonPresentation--isEnabled {
+  cursor: pointer;
+}
+.SidebarUpdatedCollapsibleHeader-addButton {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 4px;
+  width: 24px;
+}
+.ThemeableIconButtonPresentation {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  transition-duration: 200ms;
+  transition-property: background, border, fill;
 }
