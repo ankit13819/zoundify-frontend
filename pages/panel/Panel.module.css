@@ -1,0 +1,682 @@
+#asana_root {
+  --color-inverse-text: #f5f4f3;
+}
+
+.AppRoot {
+  height: 100vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background: #2e2e30;
+}
+
+.AppRoot-fullPage {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 560px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*Header */
+
+.GlobalTopbarStructure {
+  align-items: center;
+  background-color: #2e2e30;
+  border-bottom: 1px solid #424244;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  display: flex;
+  flex: 0 0 48px;
+  justify-content: space-between;
+  min-width: 320px;
+  width: 100%;
+}
+
+.GlobalTopbarStructure-leftSide,
+.GlobalTopbarStructure-leftSide--shouldAlignNavButtons {
+  padding-left: 20px;
+}
+.GlobalTopbarStructure-leftSide {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  /* justify-content: space-between; */
+}
+
+.GlobalTopbarStructure-leftSide,
+.GlobalTopbarStructure-leftChildren {
+  align-items: center;
+  display: flex;
+}
+
+.GlobalTopbarStructure-noDrag {
+  -webkit-app-region: no-drag;
+}
+
+/*Menu Icon */
+
+.GlobalTopbar-toggleSidebarButton--inverseTheme {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  fill: var(--color-inverse-text);
+}
+
+.ThemeableIconButtonPresentation,
+.ThemeableIconButtonPresentation--medium.ThemeableIconButtonPresentation {
+  height: 28px;
+  min-height: 28px;
+  min-width: 28px;
+  width: 28px;
+}
+.GlobalTopbar-toggleSidebarButton,
+.ThemeableIconButtonPresentation {
+  border-radius: 6px;
+}
+.ThemeableIconButtonPresentation,
+.ThemeableIconButtonPresentation--isEnabled {
+  cursor: pointer;
+}
+.GlobalTopbar-toggleSidebarButton {
+  margin-right: 12px;
+}
+.ThemeableIconButtonPresentation {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  transition-duration: 200ms;
+  transition-property: background-color, border, fill;
+}
+
+.Icon {
+  flex: 0 0 auto;
+  height: 16px;
+  width: 16px;
+}
+
+/*create */
+.ThemeableCardPresentation--isValid {
+  border-color: #61696a;
+}
+
+.ThemeableCardPresentation--isEnabled {
+  background: #3d3e40;
+}
+
+.ThemeableInteractiveCardPresentation--isNotSelected {
+  outline: none;
+}
+
+.OmnibuttonButtonCard {
+  align-items: center;
+  border-radius: 16px;
+  display: inline-flex;
+  height: 32px;
+  margin: 0;
+  padding: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ThemeableInteractiveCardPresentation {
+  outline: none;
+}
+.ThemeableCardPresentation {
+  background: #2a2b2d;
+  border: 1px solid #424244;
+  border-radius: 8px;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition-duration: 200ms;
+  transition-property: background, border-color, box-shadow;
+}
+
+.OmnibuttonButtonCard-iconContainer {
+  align-items: center;
+  background: #f05a6a;
+  border-radius: 50%;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.OmnibuttonButtonCard-icon {
+  fill: #f5f4f3;
+}
+
+.MiniIcon,
+.PillWidget-miniIcon {
+  flex: 0 0 auto;
+  height: 12px;
+  width: 12px;
+}
+
+/* Create */
+.TypographyPresentation--m,
+.TypographyPresentation {
+  font-size: 14px;
+  line-height: 22px;
+  padding-left: 8px;
+}
+
+.OmnibuttonButtonCard-label {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.TypographyPresentation--colorNavigation {
+  color: #f5f4f3;
+}
+.TypographyPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*Global Topbar Structure Right Side */
+.GlobalTopbarStructure-rightSide {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-right: 12px;
+}
+
+.GlobalTopbarStructure-rightSide,
+.GlobalTopbarStructure-rightChildren {
+  align-items: center;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+  display: flex;
+}
+
+.GlobalTopbarStructure-noDrag {
+  -webkit-app-region: no-drag;
+}
+
+.UnconfirmedTrialReminder {
+  align-items: center;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  display: flex;
+}
+
+.TypographyPresentation--s,
+.TypographyPresentation {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.UnconfirmedTrialReminder--countdownText {
+  cursor: default;
+}
+
+.TypographyPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.UpsellButton,
+.ThemeableRectangularButtonPresentation {
+  background: #f1bd6c;
+  border-color: #f1bd6c;
+  color: #1e1f21;
+  fill: #1e1f21;
+}
+
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--medium {
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--isEnabled {
+  cursor: pointer;
+}
+.ThemeableRectangularButtonPresentation {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: background, border, color, fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Right side Profile */
+.TopbarSettingsMenuButton,
+.TopbarSettingsMenuButton--inverseTheme,
+.ThemeableRectangularButtonPresentation {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  color: var(--color-inverse-text);
+  fill: var(--color-inverse-text);
+}
+
+.TopbarSettingsMenuButton,
+.ThemeableRectangularButtonPresentation {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  color: var(--color-text);
+  fill: var(--color-text);
+}
+.TopbarSettingsMenuButton,
+.ThemeableRectangularButtonPresentation--large {
+  padding: 0 0;
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--large {
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 var(--button-padding-large);
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--isEnabled {
+  cursor: pointer;
+}
+.ThemeableRectangularButtonPresentation {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: background, border, color, fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* .isEnabled.ThemeableRectangularButtonPresentation--isActive,
+.UpsellButton,
+.ThemeableRectangularButtonPresentation--isEnabled:active {
+  background: #e2b266;
+  border-color: #e2b266;
+  color: #1e1f21;
+  fill: #1e1f21;
+} */
+
+/* .UpsellButton,
+.ThemeableRectangularButtonPresentation--isEnabled:hover {
+  background: #e2b266;
+  border-color: #e2b266;
+  color: #1e1f21;
+  fill: #1e1f21;
+} */
+.UpsellButton,
+.ThemeableRectangularButtonPresentation {
+  background: #e2b266;
+  border-color: #e2b266;
+  color: #1e1f21;
+  fill: #1e1f21;
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--medium {
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--isEnabled {
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.ThemeableRectangularButtonPresentation {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: background, border, color, fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Right Side Profile Pic */
+.TopbarSettingsMenuButton,
+.TopbarSettingsMenuButton--inverseTheme,
+.ThemeableRectangularButtonPresentation {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  color: var(--color-inverse-text);
+  fill: var(--color-inverse-text);
+}
+
+.TopbarSettingsMenuButton,
+.ThemeableRectangularButtonPresentation {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  color: #f5f4f3;
+  fill: #f5f4f3;
+}
+.TopbarSettingsMenuButton,
+.ThemeableRectangularButtonPresentation--large {
+  padding: 0 0;
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--large {
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--isEnabled {
+  cursor: pointer;
+}
+.ThemeableRectangularButtonPresentation {
+  align-items: center;
+  /* border: 1px solid; */
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: background, border, color, fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Right side span */
+.ThemeableRectangularButtonPresentation--withNoLabel,
+.ThemeableRectangularButtonPresentation-leftIcon {
+  margin-right: 0;
+}
+
+.TopbarSettingsMenuButton-icon {
+  align-items: center;
+  display: flex;
+}
+.ThemeableRectangularButtonPresentation-leftIcon {
+  margin-right: 4px;
+}
+
+/*Avatar */
+
+.AvatarPhoto--color2.AvatarPhoto {
+  background-color: var(--color-customization-magenta-background);
+  color: var(--color-customization-magenta-foreground);
+}
+.TopbarSettingsMenuButton-avatar {
+  height: 28px;
+  margin-right: 4px;
+  min-width: 28px;
+  width: 28px;
+}
+.Avatar {
+  align-items: center;
+  background: center / cover var(--color-deprecated-lightGray3);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+  color: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  vertical-align: top;
+}
+.AvatarPhoto--medium {
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  min-width: 32px;
+  width: 32px;
+}
+.AvatarPhoto--default {
+  background: center / cover var(--color-customization-background);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: var(--color-customization-foreground);
+}
+.AvatarPhoto {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+/* Avatar Photo Image */
+.AvatarPhoto-image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+  height: inherit;
+  min-height: inherit;
+  min-width: inherit;
+  position: absolute;
+  width: inherit;
+}
+
+.MiniIcon,
+.PillWidget-miniIcon {
+  flex: 0 0 auto;
+  height: 12px;
+  width: 12px;
+}
+
+/* AsanaMain start */
+.AsanaMain {
+  display: flex;
+  /* flex: 1 1 auto; */
+  flex-direction: column;
+}
+
+.AsanaMain-mainLayer {
+  display: flex;
+  flex: 1 1 0;
+  min-height: 1px;
+}
+
+.LearningHubTransitionManager {
+  background-color: var(--color-navigation-background-medium);
+  flex: 0 0 auto;
+  margin-left: -320px;
+  transition: margin-left 250ms ease-out, transform 250ms ease-out;
+  width: 320px;
+  z-index: 100;
+}
+
+/* Asana Sidebar */
+.AsanaMain-sidebarResizableContainer {
+  flex: 0 0 auto;
+}
+.SidebarResizableContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.SidebarResizableContainer-sidebarWrapper {
+  display: flex;
+}
+
+/* Sidebar Nav container */
+.SidebarResizableContainer-sidebar {
+  flex: 1;
+}
+
+.Sidebar {
+  background-color: var(--color-navigation-background-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.SidebarCollapsibleSection,
+.SidebarCollapsibleSection:last-of-type,
+.SidebarCollapsibleSection--isExpanded {
+  border-bottom: 0;
+}
+
+.SidebarCollapsibleSection,
+.SidebarCollapsibleSection--isFirstSection {
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.SidebarTopNavLinks {
+  color: #f5f4f3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.SidebarCollapsibleSection {
+  border-bottom: 0;
+  padding: 4px 0;
+}
+
+/* Nav Menu */
+.RightClickMenu-contextMenuEventListener {
+  display: contents;
+}
+
+.SidebarNavigationLinkCard,
+.ThemeableInteractiveCardPresentation--isSelected,
+.ThemeableInteractiveCardPresentation--isEnabled,
+.ThemeableCardPresentation,
+.ThemeableCardPresentation--isValid {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.SidebarNavigationLinkCard,
+.ThemeableInteractiveCardPresentation--isSelected,
+.ThemeableInteractiveCardPresentation--isEnabled,
+.ThemeableCardPresentation {
+  background: var(--color-navigation-background-active);
+}
+.ThemeableInteractiveCardPresentation--isEnabled,
+.ThemeableInteractiveCardPresentation--isSelected,
+.ThemeableCardPresentation,
+.ThemeableCardPresentation--isValid {
+  border-color: var(--color-selected-border);
+}
+.SidebarNavigationLinkCard,
+.ThemeableInteractiveCardPresentation--isSelected,
+.ThemeableInteractiveCardPresentation--isEnabled {
+  outline: none;
+}
+.ThemeableInteractiveCardPresentation--isEnabled,
+.ThemeableInteractiveCardPresentation--isSelected,
+.ThemeableCardPresentation {
+  background: var(--color-selected-background);
+}
+.ThemeableInteractiveCardPresentation,
+.ThemeableInteractiveCardPresentation--isEnabled {
+  cursor: pointer;
+}
+.SidebarItemRow {
+  margin: 0 12px;
+}
+.SidebarNavigationLinkCard {
+  cursor: pointer;
+  align-items: center;
+  border: 0;
+  display: flex;
+  height: 32px;
+  padding-left: 12px;
+  padding-right: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ThemeableInteractiveCardPresentation {
+  outline: none;
+}
+.ThemeableCardPresentation {
+  background: var(--color-card-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition-duration: 200ms;
+  transition-property: background, border-color, box-shadow;
+}
+.link {
+  color: var(--color-text);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.link:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.SidebarNavigationLinkCard-icon {
+  align-items: center;
+  display: flex;
+  fill: #a2a0a2;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.NavIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.SidebarNavigationLinkCard-label {
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin-left: 8px;
+}
+
+.TypographyPresentation--overflowTruncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.SidebarNavigationLinkCard-spacer {
+  flex-grow: 1;
+  flex-shrink: 1;
+}

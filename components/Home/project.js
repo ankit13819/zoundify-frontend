@@ -1,5 +1,6 @@
 import Image from "next/image";
 import mediaImage from "../../src/assets/media.png";
+import ellipseImage from "../../src/assets/Ellipse.svg";
 export default function Project() {
   return (
     <div className="project-table">
@@ -32,7 +33,11 @@ export default function Project() {
               <br />
               English-Hindi
             </td>
-            <td>Rajesh</td>
+
+            <td>
+              <Image src={ellipseImage} />
+              Rajesh
+            </td>
             <td>120 mins</td>
             <td>Due 12 March</td>
             <td>STATUS</td>
@@ -46,7 +51,10 @@ export default function Project() {
               <br />
               English-Hindi
             </td>
-            <td>Rajesh</td>
+            <td>
+              <Image src={ellipseImage} />
+              Rajesh
+            </td>
             <td>120 mins</td>
             <td>Due 12 March</td>
             <td>STATUS</td>
@@ -60,7 +68,10 @@ export default function Project() {
               <br />
               English-Hindi
             </td>
-            <td>Rajesh</td>
+            <td>
+              <Image src={ellipseImage} />
+              Rajesh
+            </td>
             <td>120 mins</td>
             <td>Due 12 March</td>
             <td>STATUS</td>
@@ -74,7 +85,10 @@ export default function Project() {
               <br />
               English-Hindi
             </td>
-            <td>Rajesh</td>
+            <td>
+              <Image src={ellipseImage} />
+              Rajesh
+            </td>
             <td>120 mins</td>
             <td>Due 12 March</td>
             <td>STATUS</td>
