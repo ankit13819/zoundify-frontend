@@ -545,12 +545,6 @@
 }
 
 .SidebarCollapsibleSection,
-.SidebarCollapsibleSection:last-of-type,
-.SidebarCollapsibleSection--isExpanded {
-  border-bottom: 0;
-}
-
-.SidebarCollapsibleSection,
 .SidebarCollapsibleSection--isFirstSection {
   padding-bottom: 12px;
   padding-top: 12px;
@@ -666,9 +660,6 @@
 }
 
 /*Project Starte in sidebar */
-.Sidebar-customScrollbarScrollable {
-  border-top: 1px solid #424244;
-}
 .CustomScrollbarScrollable {
   flex: 1 1 auto;
   min-height: 1px;
@@ -752,6 +743,7 @@
 .SidebarCollapsibleSection:last-of-type,
 .SidebarCollapsibleSection--isExpanded {
   border-bottom: 0;
+  border-top: 1px solid #424244;
 }
 
 .SidebarCollapsibleSection {
@@ -860,4 +852,17 @@
   justify-content: center;
   transition-duration: 200ms;
   transition-property: background, border, fill;
+}
+
+.AsanaMain-asanaPageAndTopbar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 920px;
+  position: relative;
+  overflow: scroll;
+}
+
+.Project-panel {
+  top: 0;
 }

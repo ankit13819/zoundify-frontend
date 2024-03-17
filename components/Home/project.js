@@ -5,7 +5,7 @@ export default function Project() {
   return (
     <div className="project-table">
       <h1 style={{ color: "#fff", fontSize: "30px", fontWeight: "600" }}>
-        My Project
+        My Projects
       </h1>
       <div className="project-buttons">
         <button className="buttonOne">Upcoming</button>
