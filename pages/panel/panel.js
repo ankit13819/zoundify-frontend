@@ -10,52 +10,26 @@ import Voice from "@/src/components/Team/voice";
 import Statistics from "@/src/components/Team/statistics";
 import Settings from "@/src/components/Team/settings";
 import HomeMenu from "@/src/components/menu/homeMenu";
+import ProjectCmp from "@/components/Home/projectCmp";
 export default function Panel() {
   //define logic with state
-  const [myProjectOpen, setMyProjectOpen] = useState(false);
-  const [voiceOpen, setVoiceOpen] = useState(false);
-  const [statistics, setStatistics] = useState(false);
-  const [settingsOpen, setSettingsOpen] = useState(false);
-  const [homeMenuOpen, setHomeMenuOpen] = useState(true);
-  console.log("@@", homeMenuOpen);
-  const handleMyProjectClick = () => {
-    setMyProjectOpen(true);
-    setVoiceOpen(false);
-    setStatistics(false);
-    setSettingsOpen(false);
-    setHomeMenuOpen(false);
-  };
 
-  const handleVoiceOnClick = () => {
-    setVoiceOpen(true);
-    setMyProjectOpen(false);
-    setStatistics(false);
-    setSettingsOpen(false);
-    setHomeMenuOpen(false);
-  };
+  const [menuState, setMenuState] = useState({
+    myProjectOpen: false,
+    voiceOpen: false,
+    statistics: false,
+    settingsOpen: false,
+    homeMenuOpen: true,
+  });
 
-  const handleStatisticsClick = () => {
-    setStatistics(true);
-    setVoiceOpen(false);
-    setMyProjectOpen(false);
-    setSettingsOpen(false);
-    setHomeMenuOpen(false);
-  };
-
-  const handleSettingsClick = () => {
-    setSettingsOpen(true);
-    setVoiceOpen(false);
-    setMyProjectOpen(false);
-    setStatistics(false);
-    setHomeMenuOpen(false);
-  };
-
-  const handleHomeMenuClick = () => {
-    setHomeMenuOpen(true);
-    setVoiceOpen(false);
-    setMyProjectOpen(false);
-    setStatistics(false);
-    setSettingsOpen(false);
+  const handleMenuClick = (menu) => {
+    setMenuState({
+      myProjectOpen: menu === "my project",
+      voiceOpen: menu === "voice",
+      statistics: menu === "stats",
+      settingsOpen: menu === "settings",
+      homeMenuOpen: menu === "home menu",
+    });
   };
 
   return (
@@ -82,7 +56,9 @@ export default function Panel() {
               <div
                 className={`${styles["SidebarResizableContainer-sidebar"]} ${styles.Sidebar}`}>
                 {/*menu started here */}
-                <Menu handleHomeMenuClick={handleHomeMenuClick} />
+                <Menu
+                  handleHomeMenuClick={() => handleMenuClick("home menu")}
+                />
 
                 {/* Project Started Here */}
                 <div
@@ -96,10 +72,14 @@ export default function Panel() {
                         <Projects />
                         {/* Team section */}
                         <Team
-                          handleMyProjectClick={handleMyProjectClick}
-                          handleVoiceOnClick={handleVoiceOnClick}
-                          handleStatisticsClick={handleStatisticsClick}
-                          handleSettingsClick={handleSettingsClick}
+                          handleMyProjectClick={() =>
+                            handleMenuClick("my project")
+                          }
+                          handleVoiceOnClick={() => handleMenuClick("voice")}
+                          handleStatisticsClick={() => handleMenuClick("stats")}
+                          handleSettingsClick={() =>
+                            handleMenuClick("settings")
+                          }
                         />
                       </div>
                     </div>
@@ -108,27 +88,27 @@ export default function Panel() {
               </div>
             </div>
           </div>
-          {myProjectOpen && (
+          {menuState.myProjectOpen && (
             <menu className={styles["AsanaMain-asanaPageAndTopbar"]}>
-              <Project />
+              <ProjectCmp />
             </menu>
           )}
-          {voiceOpen && (
+          {menuState.voiceOpen && (
             <menu className={styles["AsanaMain-asanaPageAndTopbar"]}>
               <Voice />
             </menu>
           )}
-          {statistics && (
+          {menuState.settingsOpen && (
             <menu className={styles["AsanaMain-asanaPageAndTopbar"]}>
               <Statistics />
             </menu>
           )}
-          {settingsOpen && (
+          {menuState.statistics && (
             <menu className={styles["AsanaMain-asanaPageAndTopbar"]}>
               <Settings />
             </menu>
           )}
-          {homeMenuOpen && (
+          {menuState.homeMenuOpen && (
             <menu className={styles["AsanaMain-asanaPageAndTopbar"]}>
               <HomeMenu />
             </menu>

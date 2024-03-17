@@ -1,11 +1,14 @@
+import { useRouter } from "next/router";
 import styles from "../../pages/panel/Panel.module.css";
 export default function LeftTopBar() {
+  const router = useRouter();
   return (
     <div
       className={`${styles["GlobalTopbarStructure-leftSide"]} ${styles["GlobalTopbarStructure-leftSide--shouldAlignNavButtons"]}`}>
       <div
         className={`${styles["GlobalTopbarStructure-leftSide"]} ${styles["GlobalTopbarStructure-leftChildren"]} ${styles["GlobalTopbarStructure-noDrag"]}`}>
         <div
+          onClick={() => router.push("/")}
           className={`${styles["GlobalTopbar-toggleSidebarButton"]} ${styles["ThemeableIconButtonPresentation"]} ${styles["ThemeableIconButtonPresentation--medium"]} ${styles["ThemeableIconButtonPresentation--isEnabled"]} ${styles["GlobalTopbar-toggleSidebarButton--inverseTheme"]}`}>
           <svg
             className={styles.Icon}
@@ -17,7 +20,9 @@ export default function LeftTopBar() {
         </div>
         <div
           className={`${styles.OmnibuttonButtonCard} ${styles["ThemeableCardPresentation--isValid"]} ${styles["ThemeableCardPresentation--isEnabled"]} ${styles.ThemeableCardPresentation} ${styles["ThemeableInteractiveCardPresentation--isNotSelected"]} ${styles.ThemeableInteractiveCardPresentation} ${styles["ThemeableInteractiveCardPresentation--isEnabled"]}`}>
-          <div className={styles["OmnibuttonButtonCard-iconContainer"]}>
+          <div
+            className={styles["OmnibuttonButtonCard-iconContainer"]}
+            onClick={console.log("@@@")}>
             <svg
               className={`${styles["OmnibuttonButtonCard-icon"]} ${styles.MiniIcon}`}
               viewBox="0 0 24 24"
