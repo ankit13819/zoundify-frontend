@@ -16,7 +16,7 @@ export default function Panel() {
   const [voiceOpen, setVoiceOpen] = useState(false);
   const [statistics, setStatistics] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [homeMenuOpen, setHomeMenuOpen] = useState(false);
+  const [homeMenuOpen, setHomeMenuOpen] = useState(true);
   console.log("@@", homeMenuOpen);
   const handleMyProjectClick = () => {
     setMyProjectOpen(true);
