@@ -46,15 +46,15 @@ export default function Panel() {
         <div className={styles["AsanaMain-mainLayer"]} id="asana_main">
           {/* Asana Sidebar */}
           <div
-            className={`${styles["AsanaMain-sidebarResizableContainer "]} ${styles.SidebarResizableContainer}`}
-            style={{ width: "240px" }}>
+            className={`${styles["AsanaMain-sidebarResizableContainer "]} ${styles.SidebarResizableContainer}`}>
             {/* all side bar contain inside this div */}
             <div
               className={styles["SidebarResizableContainer-sidebarWrapper "]}
               style={{ flex: "0 0 240px" }}>
               {/* Navbar container */}
               <div
-                className={`${styles["SidebarResizableContainer-sidebar"]} ${styles.Sidebar}`}>
+                className={`${styles["SidebarResizableContainer-sidebar"]} ${styles.Sidebar}`}
+                style={{ width: "240px" }}>
                 {/*menu started here */}
                 <Menu
                   handleHomeMenuClick={() => handleMenuClick("home menu")}

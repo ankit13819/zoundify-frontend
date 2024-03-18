@@ -1,5 +1,6 @@
 #asana_root {
   --color-inverse-text: #f5f4f3;
+  background-image: url(https://d3ki9tyy5l5ruj.cloudfront.net/obj/6da34a3…/Aqua_background_dark.jpg);
 }
 
 .AppRoot {
@@ -861,6 +862,9 @@
   min-width: 920px;
   position: relative;
   overflow: scroll;
+
+  overflow-x: hidden;
+  background-image: url(https://d3ki9tyy5l5ruj.cloudfront.net/obj/6da34a38a05fa8ebdfc8c7d0b139e6d0335ee1ec/Aqua_background_dark.jpg);
 }
 
 .Project-panel {

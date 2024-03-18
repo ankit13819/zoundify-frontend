@@ -1,0 +1,328 @@
+.FullScreenModal-modal {
+  background-color: #1e1f21;
+  bottom: 0;
+  left: 0;
+  min-width: 920px;
+  position: fixed;
+  right: 0;
+  top: 100px;
+}
+
+.ProjectCreationModalContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ProjectCreationModalContent-formWithPreviewBody {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+.ProjectCreationModalContent-body {
+  padding: 32px 0;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+}
+.Scrollable--vertical {
+  min-height: 1px;
+  overflow-y: auto;
+}
+.Scrollable--withCompositingLayer {
+  will-change: transform;
+}
+
+/*Header */
+.ProjectCreationNavigationHeader {
+  height: 64px;
+  padding: 0 24px;
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  transition: box-shadow 250ms;
+  width: calc(100% - 48px);
+}
+
+.ProjectCreationNavigationHeader-leftContent,
+.ProjectCreationNavigationHeader-rightContent {
+  align-items: center;
+  display: flex;
+}
+
+.SubtleIconButton,
+.SubtleIconButton--standardTheme,
+.ThemeableIconButtonPresentation {
+  background: transparent;
+
+  fill: #a2a0a2;
+}
+
+.ThemeableIconButtonPresentation--medium,
+.ThemeableIconButtonPresentation {
+  height: 28px;
+  min-height: 28px;
+  min-width: 28px;
+  width: 28px;
+}
+.SubtleIconButton,
+.ThemeableIconButtonPresentation {
+  border-radius: 6px;
+}
+.ThemeableIconButtonPresentation,
+.ThemeableIconButtonPresentation--isEnabled {
+  cursor: pointer;
+}
+.ProjectCreationNavigationHeader-backButton {
+  z-index: 100;
+}
+.ThemeableIconButtonPresentation {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  transition-duration: 200ms;
+  transition-property: background, border, fill;
+}
+
+.ProjectCreationNavigationHeader-closeButton {
+  z-index: 100;
+}
+
+/* Blank Project */
+.BlankProjectFormWithPreviewStructure {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-bottom: 64px;
+  max-width: 100%;
+  overflow: visible;
+}
+.BlankProjectFormWithPreviewStructure-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.BlankProjectFormWithPreviewStructure-form {
+  flex-shrink: 0;
+  margin: 0 64px;
+}
+
+.PotSetupFormStructure {
+  width: 400px;
+}
+
+.PotSetupFormStructure-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* h2 css */
+.TypographyPresentation--h2,
+.TypographyPresentation {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.TypographyPresentation--fontWeightLight {
+  font-weight: 300;
+}
+.TypographyPresentation--colorDefault {
+  color: #f5f4f3;
+}
+.TypographyPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*New form */
+.PotSetupFormStructure-row {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.FormRowStructure--labelPlacementTop {
+  flex-direction: column;
+}
+.FormRowStructure {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 1px;
+}
+
+/*project name */
+
+.FormRowStructure--labelPlacementTop,
+.FormRowStructure-label {
+  margin-bottom: 8px;
+}
+.FormRowStructure-label {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+/*Label */
+.LabelPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  align-items: center;
+  color: #a2a0a2;
+  display: flex;
+  font-weight: 500;
+}
+
+/*from contents */
+.FormRowStructure-contents {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 1px;
+}
+
+/* input field css */
+.ProjectNameInput-underline,
+.ProjectNameInput-inputInvalid {
+  border-color: #b12d4b;
+}
+
+.SizedTextInput,
+.SizedTextInput--medium {
+  height: 36px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+.ProjectNameInput-underline {
+  background-color: #252628;
+  /* border-color: #424244; */
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0 0 1px;
+  font-size: 16px;
+  outline: none;
+  padding-left: 4px;
+}
+.SizedTextInput {
+  box-sizing: border-box;
+}
+
+/* Project Name Required field */
+
+.TypographyPresentation--s,
+.TypographyPresentation {
+  font-size: 12px;
+  line-height: 18px;
+}
+.ProjectNameInput-errorText {
+  margin-top: 4px;
+}
+.TypographyPresentation--colorDanger {
+  color: #fd612c;
+}
+.TypographyPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*Privacy */
+
+.PotSetupFormStructure-row {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.PrivacyDropdown-holder {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.FormRowStructure--labelPlacementTop {
+  flex-direction: column;
+}
+
+.FormRowStructure {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 1px;
+}
+
+.FormRowStructure--labelPlacementTop,
+.FormRowStructure-label {
+  margin-bottom: 8px;
+}
+
+.FormRowStructure-label {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.TypographyPresentation--s,
+.TypographyPresentation {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.TypographyPresentation--fontWeightMedium {
+  font-weight: 500;
+}
+.TypographyPresentation--colorWeak {
+  color: #a2a0a2;
+}
+.TypographyPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Privacy Container */
+.SecondaryButton,
+.SecondaryButton--standardTheme,
+.ThemeableRectangularButtonPresentation {
+  background: transparent;
+  color: #f5f4f3;
+  fill: #a2a0a2;
+}
+
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--large {
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+}
+.ThemeableRectangularButtonPresentation,
+.ThemeableRectangularButtonPresentation--isEnabled {
+  cursor: pointer;
+}
+.PrivacyDropdown-dropdownButton {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.ThemeableRectangularButtonPresentation {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: background, border, color, fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

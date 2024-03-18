@@ -5,6 +5,7 @@
 :root {
   background: #2e2e30;
   --color-inverse-text: #f5f4f3;
+  background-image: url(https://d3ki9tyy5l5ruj.cloudfront.net/obj/6da34a38a05fa8ebdfc8c7d0b139e6d0335ee1ec/Aqua_background_dark.jpg);
 }
 
 .login-page-new {
@@ -315,7 +316,7 @@ button {
 
 .project-table {
   border-collapse: collapse;
-
+  /* width: 100%; */
   background-color: #2e2e30;
   border: 2px;
   padding: 10px;
@@ -323,7 +324,7 @@ button {
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;
-  /* margin-top: 100px; */
+  margin-top: 50px;
 }
 
 img {
