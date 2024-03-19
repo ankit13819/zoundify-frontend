@@ -22,7 +22,15 @@
 .project-cell {
   padding: 10px;
   flex: 1;
-  margin-left: 30px;
+  margin-left: 72px;
+}
+
+.project-cell p {
+  margin-left: 10px;
+}
+
+.project-cell span {
+  margin-right: 10px;
 }
 
 .project-cell.media {

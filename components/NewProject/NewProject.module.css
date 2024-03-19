@@ -326,3 +326,136 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+/* Default Preview */
+.PotSetupFormStructure-row {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.RadioOrCheckboxGroupStructure-legend--spacing-spacing-8 {
+  margin-bottom: 8px;
+}
+
+.legendStl {
+  border: 0;
+  padding: 0;
+}
+
+/* Grid */
+.Stack--spacing-spacing-16 {
+  gap: 16px;
+}
+
+.Stack--justify-start {
+  justify-content: start;
+}
+.Stack--display-block {
+  display: flex;
+}
+.Stack--direction-column {
+  flex-direction: column;
+}
+.Stack--align-start {
+  align-items: start;
+}
+
+.ProjectLayoutSelector-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*row item */
+.ProjectLayoutSelector-rowItem:first-child {
+  margin-left: 0;
+}
+
+.ProjectLayoutSelector-rowItem {
+  margin-left: 8px;
+}
+
+/* column grid */
+
+.ThemeableInteractiveCardPresentation--isEnabled.ThemeableInteractiveCardPresentation--isSelected,
+.ThemeableCardPresentation,
+.ThemeableCardPresentation--isValid {
+  border-color: #4573d2;
+}
+.ThemeableInteractiveCardPresentation--isEnabled.ThemeableInteractiveCardPresentation--isSelected,
+.ThemeableCardPresentation {
+  background: #172237;
+}
+.ThemeableInteractiveCardPresentation,
+.ThemeableInteractiveCardPresentation--isEnabled {
+  cursor: pointer;
+}
+.PotSetupCardWithIcon {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  padding: 12px;
+  position: relative;
+}
+.ThemeableInteractiveCardPresentation {
+  outline: none;
+}
+.ThemeableCardPresentation {
+  background: #2a2b2d;
+  border: 1px solid #424244;
+  border-radius: 8px;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition-duration: 200ms;
+  transition-property: background, border-color, box-shadow;
+}
+
+/* Input field */
+.inputField[type="checkbox"],
+.inputField[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.ScreenReaderOnly {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+.inputField {
+  line-height: normal;
+}
+
+.PotSetupCardWithIcon-iconContainer {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.TypographyPresentation--m,
+.TypographyPresentation {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.TypographyPresentation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.imgDiv {
+  border-radius: 15px;
+  border: 1px solid #424244;
+  padding: 20px;
+  width: 60px;
+  height: 60px;
+}

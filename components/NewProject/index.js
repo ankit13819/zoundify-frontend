@@ -1,4 +1,6 @@
+import Image from "next/image";
 import styles from "./NewProject.module.css";
+import artistImg from "../../src/assets/artist.svg";
 export default function NewProject() {
   return (
     <div className={styles["FullScreenModal-modal"]}>
@@ -96,6 +98,42 @@ export default function NewProject() {
                     </div>
                   </div>
                 </div>
+                <fieldset className={styles.fieldset}>
+                  <legend
+                    className={`${styles.legendStl} ${styles["RadioOrCheckboxGroupStructure-legend--spacing-spacing-8"]}`}>
+                    <label className={styles.LabelPresentation}>
+                      Favourite voices
+                    </label>
+                  </legend>
+                  <div
+                    className={`${styles["Stack--spacing-spacing-16"]} ${styles["Stack--justify-start"]} ${styles["Stack--display-block"]} ${styles["Stack--direction-column"]} ${styles["Stack--align-start"]}`}>
+                    <div className={styles["ProjectLayoutSelector-row "]}>
+                      <div
+                        className={`${styles["ProjectLayoutSelector-rowItem"]}`}>
+                        <label
+                          className={`${styles["ThemeableCardPresentation"]} ${styles["ThemeableInteractiveCardPresentation"]} ${styles["PotSetupCardWithIcon"]} ${styles["ThemeableInteractiveCardPresentation--isEnabled"]} ${styles["ThemeableInteractiveCardPresentation--isSelected"]} ${styles["ThemeableCardPresentation--isValid"]}`}>
+                          <input
+                            type="radio"
+                            checked
+                            className={`${styles.inputField} ${styles["ScreenReaderOnly"]}`}
+                          />
+
+                          <div
+                            className={
+                              styles["PotSetupCardWithIcon-iconContainer"]
+                            }>
+                            <Image src={artistImg} alt="artist" />
+                          </div>
+
+                          <span
+                            className={`${styles["TypographyPresentation--m"]} ${styles.TypographyPresentation}`}>
+                            Sarah(F)
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
               </div>
             </div>
           </div>

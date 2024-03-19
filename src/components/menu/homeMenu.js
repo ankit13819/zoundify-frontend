@@ -92,7 +92,9 @@ export default function HomeMenu() {
                 <Image src={ellipseImage} alt="ellipse" />
                 <p>{item.assignedTo}</p>
               </div>
-              <div className={styles["project-cell"]}>{item.duration}</div>
+              <div className={styles["project-cell"]}>
+                <span> {item.duration}</span>
+              </div>
               <div className={styles["project-cell"]}>{item.dueDate}</div>
               <div className={styles["project-cell"]}>{item.status}</div>
             </div>
